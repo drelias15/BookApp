@@ -1,3 +1,7 @@
+
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 public class Book {
 
     private String title;
@@ -5,17 +9,26 @@ public class Book {
     private String description;
     private double price;
     private boolean inStock;
+    private int number;
+    NumberFormat formatter = new DecimalFormat("#0.00");
+    public int getNumber() {
+        return number;
+    }
 
+    public void setNumber(int number) {
+        this.number = number;
+    }
 
     public Book() {
     }
 
-    public Book(String title, String author, String description, double price, boolean inStock) {
+    public Book(String title, String author, String description, double price, boolean inStock, int number) {
         this.title = title;
         this.author = author;
         this.description = description;
         this.price = price;
         this.inStock = inStock;
+        this.number = number;
     }
 
     public String getTitle() {
@@ -58,10 +71,31 @@ public class Book {
         this.inStock = inStock;
     }
 
+
+
     public String getDisplayText(){
         return "The author is " + author + ". \n" +
                 "The title is " + title + ". \n" +
-                 "The description is " + description + ".";
+                 "The description is " + description + " \n" +
+                  "The Price is " + NumberFOrmater(price*number) + ".";}
 
+    public String getDisplayText2(){
+        return "The author is " + author + ". \n" +
+                "The title is " + title + ". \n" +
+                "The description is " + description + " \n" +
+                "The Price is: Out of Stock.";}
+
+
+    @Override
+    public String toString() {
+        return ("Author:"+this.getAuthor()+
+                " Title: "+ this.getTitle() +
+                " Description "+ this.getDescription() +
+                " The price is  : " + this.getPrice());
+    }
+
+    public String NumberFOrmater(double form){
+
+        return formatter.format(form);
     }
 }
