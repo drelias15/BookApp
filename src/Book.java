@@ -74,16 +74,18 @@ public class Book {
 
 
     public String getDisplayText(){
+        if (inStock==true){
         return "The author is " + author + ". \n" +
                 "The title is " + title + ". \n" +
                  "The description is " + description + " \n" +
-                  "The Price is " + NumberFOrmater(price*number) + ".";}
-
-    public String getDisplayText2(){
-        return "The author is " + author + ". \n" +
+                  "The Price is " + NumberFOrmater(price*number) + ". \n";}
+    else {return "The author is " + author + ". \n" +
                 "The title is " + title + ". \n" +
                 "The description is " + description + " \n" +
-                "The Price is: Out of Stock.";}
+                "The Price is: Out of Stock. \n";
+        }
+    }
+
 
 
     @Override

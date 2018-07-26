@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class BookApp {
@@ -37,7 +38,8 @@ public class BookApp {
         }
 
         for (int i=0; i<bookarr.size(); i++) {
-            System.out.println(bookarr.get(i)) ;
+          //  System.out.println(bookarr.get(i)) ;
+            System.out.println(bookarr.get(i).getDisplayText());
         }
 
     }
