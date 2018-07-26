@@ -88,10 +88,10 @@ public class Book {
 
     @Override
     public String toString() {
-        return ("Author:"+this.getAuthor()+
-                " Title: "+ this.getTitle() +
-                " Description "+ this.getDescription() +
-                " The price is  : " + this.getPrice());
+        return ("Author: "+this.getAuthor()+ "\n" +
+                " Title: "+ this.getTitle() + "\n" +
+                " Description: "+ this.getDescription() + "\n" +
+                " The price is:   " + NumberFOrmater(this.getPrice()));
     }
 
     public String NumberFOrmater(double form){

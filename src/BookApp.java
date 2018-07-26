@@ -36,7 +36,10 @@ public class BookApp {
             input = keyboard.next();
         }
 
-        System.out.println();
+        for (int i=0; i<bookarr.size(); i++) {
+            System.out.println(bookarr.get(i)) ;
+        }
+
     }
 
     private static void printer(String message){
